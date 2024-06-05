@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
         <meta property="og:type" content={metadata.type}/>
         <meta property="og:image" content={metadata.img}/>
         <meta property="og:url" content={metadata.url}/>
+        <meta property="fb:app_id" content={metadata.fbAppId} />
       </head>
       <body>
         <AuthContextProvider>

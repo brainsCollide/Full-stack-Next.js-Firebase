@@ -43,6 +43,18 @@ function App() {
         fetchData();
     };
 
+    const handleFacebookShare = () => {
+        const url = 'https://fullstacknext.netlify.app/'; // Replace with your page URL
+        const fbAppUrl = `fb://facewebmodal/f?href=${encodeURIComponent(url)}`;
+        const fbWebUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+        
+        // Attempt to open the Facebook app, fallback to web URL
+        window.location = fbAppUrl;
+        setTimeout(() => {
+            window.location = fbWebUrl;
+        }, 25);
+    };
+
     return (
         <div className="min-h-screen flex flex-col">
             <nav className="bg-gray-800 p-4">
@@ -56,7 +68,7 @@ function App() {
                 )}
             </nav>
             <main className="flex-grow bg-white bg-auto bg-no-repeat bg-bottom
-            flex justify-center items-center" style={{ backgroundImage: "url('wave2.svg')" }}
+            flex flex-col justify-center items-center " style={{ backgroundImage: "url('wave2.svg')" }}
             >
                   {user ? (
                       <div className='text-center text-gray-500 '>
@@ -78,6 +90,10 @@ function App() {
                         <span className='hover:cursor-pointer' onClick={() => router.push('/signup')}> sign up</span> if you dont have any account
                         </h1>
                   )}
+                    <button className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded mt-4" onClick={handleFacebookShare}>
+                            Share on Facebook
+                    </button>
+                  
               </main>
         </div>
     );
