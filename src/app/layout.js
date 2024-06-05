@@ -1,15 +1,19 @@
 'use client'
+import { metadata } from './utils/metadata'
 import './globals.css'
 import { AuthContextProvider } from './context/AuthContext'
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
+       <head>
+        <title>{metadata.title}</title>
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:type" content={metadata.type}/>
+        <meta property="og:img" content={metadata.img}/>
+        <meta property="og:url" content={metadata.url}/>
+      </head>
       <body>
         <AuthContextProvider>
           {children}

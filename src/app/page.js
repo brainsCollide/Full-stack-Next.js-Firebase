@@ -55,9 +55,11 @@ function App() {
                     </>
                 )}
             </nav>
-            <main className="flex-grow bg-slate-400 flex justify-center items-center">
+            <main className="flex-grow bg-white bg-auto bg-no-repeat bg-bottom
+            flex justify-center items-center" style={{ backgroundImage: "url('wave2.svg')" }}
+            >
                   {user ? (
-                      <div className='text-center'>
+                      <div className='text-center text-gray-500 '>
                           <h1 className="text-2xl font-bold mb-4">Welcome, {user.email}</h1>
                           <h2 className="text-xl mb-2">Data:</h2>
                           <ul>
@@ -70,7 +72,11 @@ function App() {
                           </button>
                       </div>
                   ) : (
-                      <h1 className="text-2xl font-bold">Please log in</h1>
+                        <h1 className="text-2xl font-medium text-gray-500"
+                        >
+                        Please <span className=' hover:cursor-pointer' onClick={() => router.push('/signin')} >log in</span> or 
+                        <span className='hover:cursor-pointer' onClick={() => router.push('/signup')}> sign up</span> if you dont have any account
+                        </h1>
                   )}
               </main>
         </div>
