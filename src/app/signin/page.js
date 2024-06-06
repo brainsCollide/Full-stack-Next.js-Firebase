@@ -22,8 +22,8 @@ function Page() {
         }
 
         // else successful
-        console.log(result)
-        return router.push("/admin")
+        console.log('Sign in successful:', result);
+        return router.push("/")
     }
     return (
         <div className="wrapper h-screen flex items-center justify-center bg-white
@@ -36,7 +36,7 @@ function Page() {
                     <div className="mb-4">
                         <label htmlFor="email">
                             <p className="mb-2">Email</p>
-                            <input onChange={(e) => setEmail(e.target.value)} required type="email" name="email" id="email" placeholder="example@mail.com" className="w-full border text-black border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500" />
+                            <input onChange={(e) => setEmail(e.target.value)} required type="email" name="email" id="email" placeholder="email" className="w-full border text-black border-gray-300 rounded py-2 px-3 focus:outline-none focus:border-blue-500" />
                         </label>
                     </div>
                     <div className="mb-4">

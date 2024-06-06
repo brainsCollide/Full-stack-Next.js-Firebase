@@ -23,7 +23,7 @@ function Page() {
 
         // else successful
         console.log(result)
-        return router.push("/admin")
+        return router.push("/")
     }
 
     
@@ -37,7 +37,7 @@ function Page() {
                 <form onSubmit={handleForm}>
                     <div className="mb-4">
                         <label htmlFor="email" className="block text-white text-sm font-medium mb-2">Email</label>
-                        <input onChange={(e) => setEmail(e.target.value)} required type="email" name="email" id="email" placeholder="example@mail.com" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+                        <input onChange={(e) => setEmail(e.target.value)} required type="email" name="email" id="email" placeholder="email" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
                     </div>
                     <div className="mb-6">
                         <label htmlFor="password" className="block text-white text-sm font-medium mb-2">Password</label>

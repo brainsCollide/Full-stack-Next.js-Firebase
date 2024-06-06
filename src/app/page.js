@@ -44,11 +44,11 @@ function App() {
     };
 
     const handleFacebookShare = () => {
-        const url = 'https://fullstacknext.netlify.app/'; // Replace with your page URL
+        const url = 'https://fullstack-amber.vercel.app/'; 
         const fbAppUrl = `fb://facewebmodal/f?href=${encodeURIComponent(url)}`;
         const fbWebUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
         
-        // Attempt to open the Facebook app, fallback to web URL
+        
         window.location = fbAppUrl;
         setTimeout(() => {
             window.location = fbWebUrl;
