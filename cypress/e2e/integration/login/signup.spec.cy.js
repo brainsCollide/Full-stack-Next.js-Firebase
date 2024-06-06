@@ -1,4 +1,4 @@
-describe('Sign-Up and Access Landing Page', () => {
+describe('Sign-In and Access Landing Page', () => {
   it('should sign in successfully and redirect to the landing page', () => {
     cy.signup();
 
